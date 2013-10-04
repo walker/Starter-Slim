@@ -1,0 +1,22 @@
+{% include "includes/header.html" %}
+
+
+<form method="POST">
+	<?php if(isset($flash['info'])) { ?>
+		<div class="info-notice"><?php echo $flash['info']; ?></div>
+	<?php } ?>
+	<?php if(isset($flash['error'])) { ?>
+		<div class="error-notice"><?php echo $flash['error']; ?></div>
+	<?php } ?>
+	<fieldset>
+		<input name="username" type="text" id="login-user" placeholder="Username" autofocus="autofocus">
+		<input name="password" type="password" id="login-pass" placeholder="Password">
+		<?php /* <input type="hidden" name="<?php echo $csrf_key; ?>" value="<?php echo $csrf_token; ?>"> */ ?>
+		<div class="submit-row">
+			<input type="submit" value="Log In" id="login-button">
+		</div>
+		<!-- <input name="remember" type="checkbox" /> Remember? -->
+	</fieldset>
+</form>
+
+{% include "includes/footer.html" %}

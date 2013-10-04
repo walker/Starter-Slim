@@ -1,0 +1,9 @@
+/vendor/
+/logs/*
+!/logs/README.md
+/templates/cache/*
+!/templates/cache/README.md
+.DS_STORE
+Thumbs.db
+content/.sass-cache/
+content/bower_components/
